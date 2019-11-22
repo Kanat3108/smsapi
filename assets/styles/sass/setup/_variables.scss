@@ -1,0 +1,53 @@
+// Project main colors
+$black:        #2A2A2A !default;
+$white:        #FFFFFF !default;
+$silver:       #f1f1f1 !default;
+$gray:         #7D7D7D !default;
+
+// Project fields statuses
+$error:        #e30614 !default;
+$notice:       #ff9800 !default;
+$success:      #1DB954 !default;
+$hint:         #888888 !default;
+
+// Brand colors
+$red: #FB1E1F;
+$blue: #1532BF;
+$yellow: yellow;
+$green: green;
+$asphalt: #586673;
+$lime: #05E254;
+
+// Social network statuses
+$gmail:    #c94428 !default;
+$facebook: #4f69a2 !default;
+
+// Grid breakpoints
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+// Transitions
+
+$defaults: (
+  s1: all .1s ease-in-out,
+  s2: all .3s ease-in-out
+) !default;
+
+%transition-1 {
+  transition: #{map-get($defaults, s1)};
+}
+%transition-2 {
+  transition: #{map-get($defaults, s2)};
+}
+
+// URLs
+
+$url-base:   'https://static.imediafile.com/alexandr/projects/coverdeal/0415-Coverdeal-Rebrand/public/images/';
+$url-assets: 'https://static.imediafile.com/alexandr/assets';
+$url-fonts:  'https://static.imediafile.com/alexandr/fonts';

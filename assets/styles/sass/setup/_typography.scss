@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap');
+
+p, span, label, h1, h2, h3, h4, h5, h6, b, a, button, input, select, strong, small, li, ol, ul {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  color: $black;
+}
+
+h1.content__title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+h2.content__title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+h3.content__title {
+  font-size: 20px;
+}
+h4.content__title {}
+h5.content__title {}
+h6.content__title {}
+
+.content {
+  &__subtitle {
+    background: #FFFFFF;
+    font-size: 14px;
+    padding: 4px 26px;
+    border-radius: 20px;
+
+    &--gray {
+      background: #707070;
+      color: #fff
+    }
+    &--lime {
+      color: $lime;
+    }
+  }
+  &__title,
+  &__text {
+    &--thin {
+      font-weight: 200;
+    }
+    &--italic {
+      font-style: italic;
+
+      span {
+        font-style: italic;
+      }
+    }
+    &--white {
+      color: $white;
+    }
+    &--lime {
+      color: $lime;
+    }
+    &--silver {
+      color: #ccc;
+    }
+    &--asphalt {
+      color: $asphalt;
+    }
+  }
+  &__title {}
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+
+    &--thin {
+      font-weight: 200;
+    }
+    &--semi-bold {
+      font-weight: 500;
+    }
+    &--bold {
+      font-weight: 600;
+    }
+    $text-sizes: xs 10, sm 12, md 14, lg 18, xl 20;
+    @each $size in $text-sizes {
+      &--#{nth($size, 1)} {
+        font-size: #{nth($size, 2)}px;
+      }
+    }
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, xs)) {
+  h1.content__title {
+    font-size: 20px;
+  }
+  h2.content__title {
+    font-size: 18px;
+  }
+}
+@media (min-width: map-get($grid-breakpoints, sm)) {
+  h1.content__title {
+    font-size: 24px;
+  }
+  h2.content__title {
+    font-size: 22px;
+  }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+  h1.content__title {
+    font-size: 30px;
+  }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {}
+@media (min-width: map-get($grid-breakpoints, xl)) {}

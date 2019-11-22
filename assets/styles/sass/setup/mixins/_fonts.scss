@@ -1,0 +1,30 @@
+@mixin fontFace($family,$src,$style,$weight) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.ttf') format('truetype');
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+@mixin fontParams($family, $style:normal, $weight:300, $color:#000, $size:16px){
+  font-family: $family, sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin font-source-sans($size: false, $colour: false, $weight: false,  $lh: false) {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  @if $size { font-size: $size; }
+  @if $colour { color: $colour; }
+  @if $weight { font-weight: $weight; }
+  @if $lh { line-height: $lh; }
+}
+@mixin font-bebas($src: '', $size: false, $colour: false, $weight: false,  $lh: false) {
+  font-family: $src, sans-serif;
+  @if $size { font-size: $size; }
+  @if $colour { color: $colour; }
+  @if $weight { font-weight: $weight; }
+  @if $lh { line-height: $lh; }
+}
